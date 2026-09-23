@@ -36,6 +36,7 @@ class UserInterface {
         setInterval(() => {
             this.lastUpdatedElement.textContent = `${STRINGS.LAST_UPDATED}${localStorage.getItem('lastUpdate') ? localStorage.getItem('lastUpdate') : 'Never'}`;
             localStorage.setItem('lastUpdate', new Date().toLocaleString());
+            location.reload();
         }, 2000);
 
         document.getElementById('home').textContent = STRINGS.HOME;
